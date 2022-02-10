@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+
+    <TextView
+        android:text="搜尋:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:layout_weight="0.01"
+    />
+    <EditText
+    android:layout_width="wrap_content"
+    android:layout_height="108dp"
+    android:id="@+id/SearchInput"
+    android:text=""
+    android:layout_weight="0.06"/>
+    <!--
+        <Button
+            android:text="Search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/chapterList"
+            android:id="@+id/SearchEnter"
+            android:layout_toRightOf="@+id/chapterList" android:layout_above="@+id/bookName"/>
+     -->
+</LinearLayout>

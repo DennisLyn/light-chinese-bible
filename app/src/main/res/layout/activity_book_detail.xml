@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="#E0E0E0"
+    tools:context="com.bayrim.apps.clbible.BookDetailActivity">
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sectionList"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/PreBt"
+        android:background="@color/LightGrey"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chapterList"
+        android:layout_marginLeft="33dp"
+        android:layout_marginStart="33dp"
+        android:prompt="@string/chapter_prompt"
+        android:layout_alignParentTop="true" android:layout_toRightOf="@+id/bookSpinner"
+        android:layout_toEndOf="@+id/bookSpinner"/>
+    <Button
+        android:text="上一章"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/PreBt"
+        android:minHeight="24dip"
+        android:freezesText="false"
+        android:onClick="goPrevious"
+        android:layout_below="@+id/bookSpinner" android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" android:textSize="12sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/bookName"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        android:layout_alignBottom="@+id/NxtBt" android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bookSpinner"
+        android:layout_alignParentTop="true" android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+    
+    <Button
+        android:text="下一章"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/NxtBt"
+        android:minHeight="24dip"
+        android:freezesText="false"
+        android:onClick="goNext"
+        android:textSize="12sp"
+        android:layout_below="@+id/chapterList" android:layout_alignLeft="@+id/chapterList"
+        android:layout_alignStart="@+id/chapterList"/>
+    <Button
+        android:text="搜尋"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/chapterList"
+        android:id="@+id/SearchBt"
+        android:layout_toRightOf="@+id/chapterList" android:layout_above="@+id/bookName"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/SearchText"
+        android:text=""
+    />
+
+</RelativeLayout>
